@@ -7,8 +7,6 @@ const employees = [];
 
 function acquireEmployeeInfo(){
 
-}
-
 prompt.inquirer([
     {
         type: 'list',
@@ -66,17 +64,20 @@ prompt.inquirer([
           case "intern":
             employees.push(new Intern(answes.name, answers.id, answers.email, answers.github));
     }
+
+    switch(answers.addNew){
+        case (addNew == true):
+            acquireEmployeeInfo();
+            break;
+            case (addNew == false):
+                //render cards
+
+        }
     
 });
 
-
-
-
-
-
-function createCard(){
-
 }
+
 
 function init(){
     acquireEmployeeInfo();
@@ -84,8 +85,7 @@ function init(){
 
 init();
 
-//refractor qs
-//tests for emplyee then do for all
+
 //make cards for each 
 //create html
 //video creation and tests
