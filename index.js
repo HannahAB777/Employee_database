@@ -12,6 +12,7 @@ const renderInternCard = require("./lib/createInternCard");
 const renderEngineerCard = require("./lib/createEngineerCard");
 const employeeCards = [];
 
+
 function acquireEmployeeInfo() {
 
     inquirer.prompt([
