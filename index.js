@@ -61,15 +61,15 @@ function acquireEmployeeInfo() {
         }
 
     ]).then((answers) => {
-        if (answers.role == "engineer") {
+        if (answers.role === "engineer") {
 
             engineers.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
 
         }
-        if (answers.role == "manager") {
+        if (answers.role === "manager") {
             managers.push(new Manager(answers.name, answers.id, answers.email, answers.github));
         }
-        if (answers.role == "intern") {
+        if (answers.role === "intern") {
             interns.push(new Intern(answers.name, answers.id, answers.email, answers.github));
         }
         if (answers.addNew == true) {
@@ -95,9 +95,6 @@ function acquireEmployeeInfo() {
 
             fs.writeFile("./dist/index.html", renderHtml(employeeCards), (err) => err ? console.log(err) : console.log("new employee register created!"));
 
-            console.log(employeeCards);
-            console.log(managers);
-            console.log(interns);
 
         }
 
