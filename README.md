@@ -47,7 +47,8 @@
   npm install jest and make sure in the package.json file, "test" is set to "jest test" so you are running all the test files at once.
   ![employee register - Visual Studio Code 21_02_2022 11_35_25 AM](https://user-images.githubusercontent.com/93077324/154885327-20f86609-f2af-4973-a087-f1b8e2211438.png)
   then in the terminal type "npm test" then press enter.
-  extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/6f62bc95-4293-41a2-y04c-4c6c501aec98
+  
+  https://drive.google.com/file/d/10PasmNJ0Sq14ohHk3-2BlVvm-WBnrZDz/view
   
   ## Questions
 
