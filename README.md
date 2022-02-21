@@ -43,8 +43,13 @@
     
   ## Tests
 
-  npm test
-    
+  npm test:
+  npm install jest and make sure in the package.json file, "test" is set to "jest test" so you are running all the test files at once.
+  ![employee register - Visual Studio Code 21_02_2022 11_35_25 AM](https://user-images.githubusercontent.com/93077324/154885327-20f86609-f2af-4973-a087-f1b8e2211438.png)
+  then in the terminal type "npm test" then press enter.
+  
+  https://drive.google.com/file/d/10PasmNJ0Sq14ohHk3-2BlVvm-WBnrZDz/view
+  
   ## Questions
 
   For any questions regarding this repository please contact me below,
