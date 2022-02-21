@@ -6,7 +6,9 @@ const renderHtml = require("./lib/create-html");
 const managers = [];
 const interns = [];
 const engineers = [];
-const createCards = require("./lib/createCards");
+const renderEngineerCard = require("./lib/createCards");
+const renderInternCard = require("./lib/createCards");
+const renderManagerCard = require("./lib/createCards");
 const fs = require('fs');
 const employeeCards = [];
 
@@ -50,7 +52,7 @@ function acquireEmployeeInfo(){
         type: 'input',
         message: 'please type team members school name',
         name: 'school',
-        when:(answers) => answers.role === "Intern",
+        when:(answers) => answers.role === "intern",
     },
     {
         type: 'confirm',
@@ -72,10 +74,10 @@ function acquireEmployeeInfo(){
     }
 
     switch(answers.addNew){
-        case (addNew == true):
+        case ("y"):
             acquireEmployeeInfo();
             break;
-            case (addNew == false):
+            case ("n"):
             
             for (let i = 0; i < engineers.length; i++) {
                 const newEngineer = engineers[i];
