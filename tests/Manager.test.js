@@ -44,7 +44,8 @@ describe("to test the manager class", () =>{
        //testing getOfficeNumber()
         const truth = "234";
         const manager = new Manager("Tom", "382", "com@mail.email", truth);
-        expect(manager.getOfficeNumber).toBe(truth);
+        const result = manager.getOfficeNumber();
+        expect(result).toBe(truth);
     });
 
 });

@@ -2,12 +2,17 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/engineer");
-const renderHtml = require("./lib/create-htlm");
-const employees = [];
+const renderHtml = require("./lib/create-html");
+const managers = [];
+const interns = [];
+const engineers = [];
+const createCards = require("./lib/createCards");
+const fs = require('fs');
+const employeeCards = [];
 
 function acquireEmployeeInfo(){
 
-prompt.inquirer([
+    inquirer.prompt([
     {
         type: 'list',
         message: 'please select team members role',
@@ -56,13 +61,14 @@ prompt.inquirer([
 ]).then((answers)=>{
     switch(answers.role) {
         case "engineer":
-          employees.push(new Engineer(answes.name, answers.id, answers.email, answers.github));
+          engineers.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
+
           break;
         case "manager":
-            employees.push(new Manager(answes.name, answers.id, answers.email, answers.github));
+            managers.push(new Manager(answers.name, answers.id, answers.email, answers.github));
           break;
           case "intern":
-            employees.push(new Intern(answes.name, answers.id, answers.email, answers.github));
+            interns.push(new Intern(answers.name, answers.id, answers.email, answers.github));
     }
 
     switch(answers.addNew){
@@ -70,40 +76,36 @@ prompt.inquirer([
             acquireEmployeeInfo();
             break;
             case (addNew == false):
-                //render cards
+            
+            for (let i = 0; i < engineers.length; i++) {
+                const newEngineer = engineers[i];
 
+                employeeCards.push(renderEngineerCard(newEngineer));
+            }
+            for (let i = 0; i < managers.length; i++) {
+                const newManager = managers[i];
+
+                employeeCards.push(renderManagerCard(newManager));
+            }
+            for (let i = 0; i < interns.length; i++) {
+                const newIntern = interns[i];
+
+                employeeCards.push(renderInternCard(newIntern));
+            }
+
+            fs.writeFile(".././dist/index.html", renderHtml(employeeCards));
+              
+                  
+            
         }
     
 });
 
 }
 
-
 function init(){
     acquireEmployeeInfo();
 }
 
 init();
-
-
-//make cards for each 
-//create html
-//video creation and tests
-//finish readme
-
-
-
-////├── __tests__/             //jest tests
-//│   ├── Employee.test.js
-//│   ├── Engineer.test.js
-//│   ├── Intern.test.js
-//│   └── Manager.test.js
-//├── dist/                  // rendered output (HTML) and CSS style sheet
-//├── lib/                   // classes
-//├── src/                   // template helper code
-//├── .gitignore             // indicates which folders and files Git should ignore
-//├── index.js               // runs the application
-//└── package.json   
-
-
 

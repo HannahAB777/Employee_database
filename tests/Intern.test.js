@@ -45,7 +45,8 @@ describe("to test the intern class", () =>{
        //testing getSchool()
         const truth = "aSchool";
         const intern = new Intern("Tom", "382", "com@mail.email", truth);
-        expect(intern.getOfficeNumber).toBe(truth);
+        const result = intern.getSchool();
+        expect(result).toBe(truth);
     });
 
 });
