@@ -12,7 +12,8 @@
   https://drive.google.com/file/d/12V7CacM25N4SHC9D4YXX9lkYLP1AWikZ/view
   
   below is a screenshot of the rendered HTML file:
-  ![image](https://user-images.githubusercontent.com/93077324/154896654-36a36714-75d0-4242-ab21-36929416b70a.png)
+  ![image](https://user-images.githubusercontent.com/93077324/154966340-6fec2e73-c9d4-448a-bf3d-1f0242a0246c.png)
+
   
   ## Table of Contents
   | Table of Contents|
