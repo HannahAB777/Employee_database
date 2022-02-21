@@ -9,9 +9,13 @@
   An employee register creator, following the prompts from your intergrated terminal you can enter new employees, there details and position in the company. made with the use of   node.js, after answering all questions on employees an html file is created storing the data.
   
   here is a video of what that process looks like: 
+  https://drive.google.com/file/d/1ml_lPFdd4YVn6Hy-NtNfSB7djAAnfdUh/view
   
   below is a screenshot of the rendered HTML file:
-  ![image](https://user-images.githubusercontent.com/93077324/154888485-98e89e94-3524-4d33-8a00-001726dc8bfa.png)
+  ![image](https://user-images.githubusercontent.com/93077324/154896654-36a36714-75d0-4242-ab21-36929416b70a.png)
+  
+  here is a link to the published HTML page:
+  
 
   ## Table of Contents
   | Table of Contents|
@@ -20,7 +24,6 @@
   |[Usage](#usage)|
   |[Credits](#credits)|
   |[License](#license)|
-  |[Features](#features)|
   |[How to confribute](#how-to-contribute)|
   |[Tests](#how-to-contribute)|
   |[Questions](#questions)|
@@ -39,10 +42,6 @@
   Hannah Allison-Batt
   [https://github.com/HannahAB777](https://github.com/HannahAB777)
   
-  ## Features
-  
- 
-
   ## How to Contribute
 
   however you like
@@ -52,6 +51,9 @@
   npm test:
   npm install jest and make sure in the package.json file, "test" is set to "jest test" so you are running all the test files at once.
   then in the terminal type "npm test" then press enter.
+  
+  below is a video showing how to run tests:
+  https://drive.google.com/file/d/1v3PoSRjGHIjlzq5m44zlfwAp2WL9n8P2/view
 
   
   ## Questions
