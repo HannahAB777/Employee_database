@@ -6,7 +6,13 @@
   
   ## Description
   
+  An employee register creator, following the prompts from your intergrated terminal you can enter new employees, there details and position in the company. made with the use of   node.js, after answering all questions on employees an html file is created storing the data.
   
+  here is a video of what that process looks like: 
+  
+  below is a screenshot of the rendered HTML file:
+  ![image](https://user-images.githubusercontent.com/93077324/154888485-98e89e94-3524-4d33-8a00-001726dc8bfa.png)
+
   ## Table of Contents
   | Table of Contents|
   | ----------- |
@@ -22,7 +28,7 @@
   
   ## Installation
   
-  download and run in the intergrated terminal
+  download and run in the intergrated terminal, remeber to npm init, npm install and npm install jest.
   
   ## Usage
 
@@ -39,16 +45,14 @@
 
   ## How to Contribute
 
-  however they like
+  however you like
     
   ## Tests
 
   npm test:
   npm install jest and make sure in the package.json file, "test" is set to "jest test" so you are running all the test files at once.
-  ![employee register - Visual Studio Code 21_02_2022 11_35_25 AM](https://user-images.githubusercontent.com/93077324/154885327-20f86609-f2af-4973-a087-f1b8e2211438.png)
   then in the terminal type "npm test" then press enter.
-  
-  https://drive.google.com/file/d/10PasmNJ0Sq14ohHk3-2BlVvm-WBnrZDz/view
+
   
   ## Questions
 
