@@ -93,7 +93,7 @@ function acquireEmployeeInfo() {
                 employeeCards.push(renderInternCard(newIntern));
             }
 
-            fs.writeFile("./dist/index.html", renderHtml(employeeCards));
+            fs.writeFile("./dist/index.html", renderHtml(employeeCards), (err) => err ? console.log(err) : console.log("new employee register created!"));
 
             console.log(employeeCards);
             console.log(managers);
