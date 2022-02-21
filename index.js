@@ -1,15 +1,15 @@
 const inquirer = require("inquirer");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
-const Intern = require("./lib/engineer");
+const Intern = require("./lib/intern");
 const renderHtml = require("./lib/create-html");
 const managers = [];
 const interns = [];
 const engineers = [];
-const renderEngineerCard = require("./lib/createCards");
-const renderInternCard = require("./lib/createCards");
-const renderManagerCard = require("./lib/createCards");
 const fs = require('fs');
+const renderManagerCard = require("./lib/createManagerCard");
+const renderInternCard = require("./lib/createInternCard");
+const renderEngineerCard = require("./lib/createEngineerCard");
 const employeeCards = [];
 
 function acquireEmployeeInfo() {
@@ -67,10 +67,10 @@ function acquireEmployeeInfo() {
 
         }
         if (answers.role === "manager") {
-            managers.push(new Manager(answers.name, answers.id, answers.email, answers.github));
+            managers.push(new Manager(answers.name, answers.id, answers.email, answers.officeNumber));
         }
         if (answers.role === "intern") {
-            interns.push(new Intern(answers.name, answers.id, answers.email, answers.github));
+            interns.push(new Intern(answers.name, answers.id, answers.email, answers.school));
         }
         if (answers.addNew == true) {
             acquireEmployeeInfo();
