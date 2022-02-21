@@ -58,7 +58,7 @@ function acquireEmployeeInfo() {
             type: 'confirm',
             message: 'would you like to add another team member?',
             name: 'addNew'
-        },
+        }
 
     ]).then((answers) => {
         if (answers.role == "engineer") {
@@ -72,10 +72,10 @@ function acquireEmployeeInfo() {
         if (answers.role == "intern") {
             interns.push(new Intern(answers.name, answers.id, answers.email, answers.github));
         }
-        if (answers.addNew == "yes") {
+        if (answers.addNew == true) {
             acquireEmployeeInfo();
         }
-        if (answers.addNew == "no") {
+        if (answers.addNew == false) {
 
             for (let i = 0; i < engineers.length; i++) {
                 const newEngineer = engineers[i];
@@ -93,7 +93,7 @@ function acquireEmployeeInfo() {
                 employeeCards.push(renderInternCard(newIntern));
             }
 
-            fs.writeFile(".././dist/index.html", renderHtml(employeeCards));
+            fs.writeFile("./dist/index.html", renderHtml(employeeCards));
 
             console.log(employeeCards);
             console.log(managers);
