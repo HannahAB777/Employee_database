@@ -51,7 +51,7 @@
   then in the terminal type "npm test" then press enter.
   
   below is a video showing how to run tests:
-  https://drive.google.com/file/d/1v3PoSRjGHIjlzq5m44zlfwAp2WL9n8P2/view
+  https://drive.google.com/file/d/1sj35Wsl2ZO9o6aAnmE-sPcr7k4XB0LRr/view
 
   
   ## Questions
